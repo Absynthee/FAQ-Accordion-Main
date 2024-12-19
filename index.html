@@ -1,238 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | FAQ accordion</title>
-
-  <style>
-
-  * {
-      --White: hsl(0, 0%, 100%);
-      --Pink: hsl(275, 100%, 97%);
-      --Purple: hsl(292, 16%, 49%);
-      --DarkPurple: hsl(292, 42%, 14%);    
-    }
-
-  html {
-    background-color: var(--Pink);
-    background-image: url(assets/images/background-pattern-desktop.svg);
-    background-repeat: repeat-x;
-    background-position: top;
-    margin: auto;
-    height: 100vh;
-    color: var(--DarkPurple);
-    font-family: "Work Sans", sans-serif;
-    font-style: normal;
-  }
-  
-  body {
-    background-color: var(--White);
-    position: relative;
-    max-width: 525px;
-    margin: auto;
-    margin-top: 50px;
-    padding-top: 2px;
-    padding-bottom: 25px;
-    padding-inline: 40px;
-    top: 120px;
-    border-radius: 15px;
-    box-shadow: 5px 30px 50px rgba(41, 15, 58, 0.15);
-  }
-
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 13px;
-    margin-left: 4px;
-  }
-
-  h1 img {
-    margin-right: 8px;
-  }
-
-  .accordion {
-    background-color: var(--White);
-    color:var(--DarkPurple);
-    display: block;
-    font-size: 18px;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 5px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;  
-  }
-  
-  .open {
-    display: block;
-  }
-
-  .panel {
-    overflow: hidden;
-    display: none;
-    margin-top: -5px;
-    margin-inline: 2px;
-  }  
-
-  .accordion:hover {
-    color: #9d30d1;
-  }
-
-  .accordion:after {
-    content: '';
-    position: absolute;
-    left: 88.5%;
-    height: 31px;
-    width: 30px;
-    background-image: url(assets/images/icon-plus.svg);
-    float: right;
-    margin-top: -5px;
-    margin-right: -2px;
-  }
-
-.active:after {
-    content: '';
-    position: absolute;
-    left: 88.5%;
-    height: 31px;
-    width: 30px;
-    background-image: url(assets/images/icon-minus.svg);
-    float: right;
-    /* margin-top: -5px;
-    margin-right: -2px; */
-  }
-
-  p {
-    color: var(--Purple);
-    line-height: 1.5;
-  }
-
-  hr {
-    opacity: .05;
-  }
-   
-  .attribution {
-    top: 2.5rem;
-    margin: auto;
-    margin-right: 25px;
-    text-align: center;
-  }
-
-  a {
-    text-decoration: none;
-    color: var(--Black);
-  }
-
-  @media  only screen and (max-width: 375px) {
-    
-    html {
-      background-image: url(assets/images/background-pattern-mobile.svg);
-    }
-
-    body {
-      max-width: 275px;
-      padding-inline: 25px;
-      padding-bottom: 10px;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    h1 img {
-    margin-right: 12px;
-    height: 25px;
-    }
-
-    .accordion {
-      font-size: 16px;
-      max-width: 100%;
-    }
-
-    .accordion:after {
-      left: 85%;
-      margin-top: -8px;
-    }
-
-     p {
-      font-size: 14px;
-    }
-
-  }
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <script src="assets/styles/script.js" defer></script>
+  <title>Frontend Mentor | FAQ Accordion</title>
 </head>
+
 <body>
 
-  <h1><img src="assets/images/icon-star.svg" alt=""> FAQs</h1>
+  <header>
+    <h1><img src="assets/images/icon-star.svg" alt=""> FAQs</h1>
+  </header>
 
-  <button class="accordion open">What is Frontend Mentor, and&nbsp;how&nbsp;will&nbsp;it&nbsp;help&nbsp;me?</button>
-  <div class="panel">
-  <p>Frontend Mentor offers realistic coding challenges to help developers improve their 
-  frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
-  all levels and ideal for portfolio building.</p>
-  </div>
+  <main>
+    <button class="accordion active">What is Frontend Mentor, and&nbsp;how&nbsp;will&nbsp;it&nbsp;help&nbsp;me?</button>
+    <div class="panel" style="max-height: 200px;">
+      <p>Frontend Mentor offers realistic coding challenges to help developers improve their
+        frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+        all levels and ideal for portfolio building.</p>
+    </div>
+    <hr>
+    <button class="accordion">Is Frontend Mentor free?</button>
+    <div class="panel">
+      <p>Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+        option providing access to a range of projects suitable for all skill levels.</p>
+    </div>
+    <hr>
+    <button class="accordion">Can I use Frontend Mentor projects&nbsp;in&nbsp;my&nbsp;portfolio?</button>
+    <div class="panel">
+      <p>Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+        way to showcase your skills to potential employers!</p>
+    </div>
+    <hr>
+    <button class="accordion">How can I get help if I'm stuck&nbsp;on&nbsp;a&nbsp;challenge?</button>
+    <div class="panel">
+      <p>The best place to get help is inside Frontend Mentor's Discord community. There's a help
+        channel where you can ask questions and seek support from other community members.</p>
+    </div>
+  </main>
 
-<hr>
-<button class="accordion">Is Frontend Mentor free?</button>
-<div class="panel">
-  <p>Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
-  option providing access to a range of projects suitable for all skill levels.</p>
-</div>
-
-<hr>
-<button class="accordion">Can I use Frontend Mentor projects&nbsp;in&nbsp;my&nbsp;portfolio?</button>
-<div class="panel">
-  <p>Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-  way to showcase your skills to potential employers!</p>
-</div>
-
-<hr>
-<button class="accordion">How can I get help if I'm stuck&nbsp;on&nbsp;a&nbsp;challenge?</button>
-<div class="panel">
-  <p>The best place to get help is inside Frontend Mentor's Discord community. There's a help 
-  channel where you can ask questions and seek support from other community members.</p>
-</div>
-
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded&nbsp;by&nbsp;<a href="#">Austin&nbsp;Spillman</a>.
-  </div> -->
-
-  <script>
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  var panel = acc[i].nextElementSibling;
-  if (acc[i].classList.contains("open")) {
-    acc[i].classList.add("active");
-    panel.style.display = "block";
-  }
-  
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-    
-    </script>
-    
 </body>
+
 </html>

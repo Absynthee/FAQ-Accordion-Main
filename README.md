@@ -53,7 +53,7 @@ I wanted to make the first button be active by default, as shown in the desktop 
 
 ### Continued development
 
-Going forward I need to learn how to write more Javascript myself instead of relying on snippets from elsewhere & asking Copilot to help me tweak to get the desired result.
+10 MONTH UPDATE: Updated the html to include semantics, seperated css and javascript into their own files and added a transition to the height of the accordion so it opens and closes smoothly.
 
 ### Useful resources
 
